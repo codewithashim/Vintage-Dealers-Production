@@ -8,8 +8,8 @@ import CheckoutForm from "@/src/Components/CheckoutForm/CheckoutForm";
 const Index = () => {
   const { baseUrl } = useContext(DataContextApi);
   const router = useRouter();
-  const { Index } = router.query;
-  const productId = Index;
+  const { index } = router.query;
+  const productId = index;
   const [productByIdData, setProductByIdData] = useState([]);
 
   useEffect(() => {

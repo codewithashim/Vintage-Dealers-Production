@@ -9,8 +9,8 @@ import React, { useContext, useEffect } from "react";
 const Index = () => {
   const { baseUrl } = useContext(DataContextApi);
   const router = useRouter();
-  const { Index } = router.query;
-  const searviceId = Index;
+  const { index } = router.query;
+  const searviceId = index;
   const [serviceByIdData, setServiceByIdData] = React.useState([]);
 
   useEffect(() => {

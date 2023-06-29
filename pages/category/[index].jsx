@@ -10,8 +10,8 @@ const Index = () => {
   const { productLoaded } = useShopHooks();
   const { allProductData } = useProduct();
   const router = useRouter();
-  const { Index } = router.query;
-  const CategoryName = Index;
+  const { index } = router.query;
+  const CategoryName = index;
 
   const filterProductData = allProductData?.filter((data) => {
     return data.productCategory === CategoryName;

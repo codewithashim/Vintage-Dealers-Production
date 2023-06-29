@@ -14,8 +14,8 @@ import Swal from "sweetalert2";
 const Index = () => {
   const { baseUrl } = useContext(DataContextApi);
   const router = useRouter();
-  const { Index } = router.query;
-  const productId = Index;
+  const { index } = router.query;
+  const productId = index;
   const [productByIdData, setProductByIdData] = useState([]);
   const { user } = useContext(AuthContext);
 

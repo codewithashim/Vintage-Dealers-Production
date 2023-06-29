@@ -16,7 +16,7 @@ const useUser = () => {
           setIsUserLoading(false);
         });
     }
-  }, [user?.email, setIsUser]);
+  }, [user?.email, setIsUser, baseUrl]);
   return [isUser, isUserLoading];
 };
 

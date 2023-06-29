@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { DataContextApi } from "@/src/Context/DataContext";
 import { useQuery } from "@tanstack/react-query";
 import React, { useContext, useEffect, useState } from "react";
@@ -35,7 +36,7 @@ const useProduct = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, [page, pageSize]);
+  }, [fetchProducts, page, pageSize]);
 
   const handlePrevPage = () => {
     if (page > 1) {

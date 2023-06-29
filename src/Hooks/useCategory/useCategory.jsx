@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useState } from "react";
 import { DataContextApi } from "@/src/Context/DataContext";
 import { useQuery } from "@tanstack/react-query";

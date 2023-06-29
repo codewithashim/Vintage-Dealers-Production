@@ -19,7 +19,7 @@ const Index = () => {
       .then((data) => {
         setServiceByIdData(data.data);
       });
-  }, [searviceId]);
+  }, [baseUrl, searviceId]);
 
   if (!searviceId) {
     return (

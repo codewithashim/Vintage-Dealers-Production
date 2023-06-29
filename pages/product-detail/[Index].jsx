@@ -30,7 +30,7 @@ const Index = () => {
       .then((data) => {
         setProductByIdData(data?.data);
       });
-  }, [productId]);
+  }, [baseUrl, productId]);
 
   if (productByIdData && productByIdData?.length > 0) {
   } else {
@@ -168,7 +168,7 @@ const Index = () => {
               productByIdData.length &&
               productByIdData?.map((product) => {
                 return (
-                  <div>
+                  <div key={product?._id}>
                     <Image
                       src={product?.productImage}
                       alt={product?.productName}

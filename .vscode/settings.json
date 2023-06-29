@@ -1,0 +1,7 @@
+{
+  "files.exclude": {
+    "**/Thumbs.db": false
+  },
+  "search.useGlobalIgnoreFiles": true,
+  "search.useParentIgnoreFiles": true
+}

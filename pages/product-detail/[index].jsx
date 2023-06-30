@@ -1,3 +1,4 @@
+import React, { useContext, useEffect, useState } from "react";
 import { DataContextApi } from "@/src/Context/DataContext";
 import { AuthContext } from "@/src/Context/UserContext";
 import ChatLayout from "@/src/Layouts/ChatLayout";
@@ -6,7 +7,6 @@ import TestDriveModal from "@/src/Shared/TestDriveModal/TestDriveModal";
 import { Divider } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useContext, useEffect, useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
 import StripeCheckout from "react-stripe-checkout";
 import Swal from "sweetalert2";
@@ -28,15 +28,14 @@ const Index = () => {
     fetch(`${baseUrl}/api/product/${productId}`)
       .then((res) => res.json())
       .then((data) => {
-        setProductByIdData(data?.data);
+        if (Array.isArray(data?.data) && data?.data.length > 0) {
+          setProductByIdData(data?.data);
+        } else {
+          console.log("productByIdData is undefined or empty");
+          // Handle the case where productByIdData is undefined or empty
+        }
       });
   }, [productId, baseUrl]);
-
-  if (productByIdData && productByIdData?.length > 0) {
-  } else {
-    console.log("productByIdData is undefined or empty");
-    // Handle the case where productByIdData is undefined or empty
-  }
 
   const productName = productByIdData?.[0]?.productName;
   const productPrice = productByIdData?.[0]?.productPrice;

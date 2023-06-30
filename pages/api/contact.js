@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   });
 
   const mailOptions = {
-    from: '@gmail.com',
+    from: 'royalrathore05062001@gmail.com',
     to: email,
     subject: 'Contact Form Submission',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,

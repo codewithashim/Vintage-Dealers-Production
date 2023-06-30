@@ -94,10 +94,12 @@ const Index = () => {
             ],
           };
 
-          const sendInvoiceEmail = await fetch(`${baseUrl}/api/send-email`, {
+          const sendInvoiceEmail = await fetch("/api/send-email", {
             method: "POST",
-            headers,
-            body: JSON.stringify(emailData),
+            body: JSON.stringify({ name: name, email: email, message: message }),
+            headers: {
+              "Content-Type": "application/json",
+            },
           });
 
           const { status: emailStatus } = sendInvoiceEmail;

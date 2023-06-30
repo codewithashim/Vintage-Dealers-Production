@@ -25,6 +25,8 @@ const useProduct = () => {
       setIsLoadingProduct(false);
     } catch (error) {
       console.log(error);
+      setIsLoadingProduct(false);
+
     } finally {
       setIsLoadingProduct(false);
     }
@@ -36,7 +38,7 @@ const useProduct = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, [fetchProducts, page, pageSize]);
+  }, [pageSize]);
 
   const handlePrevPage = () => {
     if (page > 1) {

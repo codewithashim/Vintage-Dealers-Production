@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Link from "next/link";
 import { FaArrowDown } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
@@ -20,8 +20,11 @@ const UserPopUp = ({ reff, close }) => {
               Login to Make My Listing
             </h3>
             <div className="justify-center  mt-1 flex rounded-lg tracking-[.8px] py-2">
-              <Link href="/userSignup" className="w-8/12 common_btn text-center">
-              sign up as user
+              <Link
+                href="/userSignup"
+                className="w-8/12 common_btn text-center"
+              >
+                sign up as user
               </Link>
             </div>
             <div className="justify-center flex  border-b pb-1 text-2xl font-bold">
@@ -29,8 +32,11 @@ const UserPopUp = ({ reff, close }) => {
             </div>
             <div></div>
             <div className="pt-2 justify-center my-2 flex">
-              <Link href="/add-listing" className="w-8/12 common_btn text-center">
-                  sign up as advertiser
+              <Link
+                href="/add-listing"
+                className="w-8/12 common_btn text-center"
+              >
+                sign up as advertiser
               </Link>
             </div>
             <div className="flex items-center justify-center">

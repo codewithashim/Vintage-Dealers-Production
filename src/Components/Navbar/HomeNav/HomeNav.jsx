@@ -4,11 +4,15 @@ import React, { useContext, useState } from "react";
 import { FaBars, FaMixer } from "react-icons/fa";
 
 const HomeNav = () => {
-  const {homeHeroHeaderShow,setHomeHeroHeaderShow} = useContext(DataContextApi)
+  const { homeHeroHeaderShow, setHomeHeroHeaderShow } =
+    useContext(DataContextApi);
   const menuList = (
     <>
       <li>
-        <Link href="/" className="text-gray-700 hover:text-red-500 text-[1.2rem] font-semibold">
+        <Link
+          href="/"
+          className="text-gray-700 hover:text-red-500 text-[1.2rem] font-semibold"
+        >
           Home
         </Link>
       </li>
@@ -37,7 +41,10 @@ const HomeNav = () => {
         </Link>
       </li>
       <li>
-        <Link href="/contact" className="text-gray-700 hover:text-red-500 text-[1.2rem] font-semibold">
+        <Link
+          href="/contact"
+          className="text-gray-700 hover:text-red-500 text-[1.2rem] font-semibold"
+        >
           Contact Us
         </Link>
       </li>

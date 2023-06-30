@@ -9,9 +9,7 @@ const ChatLayout = ({ children }) => {
   return (
     <main>
       {children}
-      <div
-        className="fixed right-0 bottom-0 md:right-3 md:bottom-3 z-50"
-      >
+      <div className="fixed right-0 bottom-0 md:right-3 md:bottom-3 z-50">
         <Link href={chatlink} target="_blank" rel="noopener noreferrer">
           <div className="absolute ">
             <button className="fixed right-3 bottom-3 md:right-8 md:bottom-8 common_btn hover:border-red-500 color-b  rounded-md duration-300 transform  shadow-sm hover:-translate-y-1.5  hover:bg-red-10 hover:text-red-500">

@@ -42,7 +42,7 @@ const TopNav = () => {
           localStorage.setItem("searchRes", JSON.stringify(resultData));
         }
       });
-  }, [baseUrl, searchTerm, setSearchVal]);
+  }, [searchTerm]);
 
   const productName = searchData?.map((n) => n.productName);
   const productCategory = searchData?.map((n) => n.productCategory);

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import ChatLayout from "@/src/Layouts/ChatLayout";
 import MainLayout from "@/src/Layouts/MainLayout";
 import Typography from "@mui/material/Typography";
@@ -8,7 +8,6 @@ import GrainIcon from "@mui/icons-material/Grain";
 import Link from "next/link";
 import Image from "next/image";
 import AboutUsBuilding from "../../src/Assets/About/AboutUsBanner.png";
-import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { DataContextApi } from "@/src/Context/DataContext";
 

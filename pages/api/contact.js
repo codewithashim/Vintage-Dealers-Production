@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   });
 
   const mailOptions = {
-    from: 'royalrathore05062001@gmail.com',
+    from: `${process.env.NEXT_PUBLIC_SMTP_MAIL_TO}`,
     to: email,
     subject: 'Contact Form Submission',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,

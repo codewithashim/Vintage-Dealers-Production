@@ -30,7 +30,7 @@ const Index = () => {
       .then((data) => {
         setProductByIdData(data?.data);
       });
-  }, [baseUrl, productId]);
+  }, [productId, baseUrl]);
 
   if (productByIdData && productByIdData?.length > 0) {
   } else {
@@ -72,6 +72,24 @@ const Index = () => {
           productId: paymentProductId,
         };
 
+        const responseEmail = await fetch("/api/payment", {
+          method: "POST",
+          body: JSON.stringify({
+            name: user?.displayName,
+            email: user?.email,
+            paymentId: token.id,
+            paymentAmount: productPrice,
+            paymentProduct: productName,
+            paymentDate: new Date(),
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        const data = await responseEmail.json();
+        console.log(data);
+
         const saveInDB = await fetch(`${baseUrl}/api/payment`, {
           method: "POST",
           headers,
@@ -80,40 +98,12 @@ const Index = () => {
         const { status } = saveInDB;
 
         if (status === 200) {
-          // Send invoice email
-          const emailData = {
-            to: user?.email,
-            subject: "Invoice for your payment",
-            body: "Here is your invoice for the payment. Thank you for your purchase!",
-            attachments: [
-              {
-                filename: "invoice.pdf",
-                path: `${baseUrl}/api/invoice/${paymentProductId}`,
-                contentType: "application/pdf",
-              },
-            ],
-          };
-
-          const sendInvoiceEmail = await fetch("/api/send-email", {
-            method: "POST",
-            body: JSON.stringify({ name: name, email: email, message: message }),
-            headers: {
-              "Content-Type": "application/json",
-            },
-          });
-
-          const { status: emailStatus } = sendInvoiceEmail;
-          if (emailStatus === 200) {
-            console.log("Invoice email sent successfully!");
-          } else {
-            console.log("Failed to send invoice email");
-          }
-
           console.log("Payment Details Saved in DB");
+
           Swal.fire({
             position: "center",
             timerProgressBar: true,
-            title: "Successfully Payment Done!",
+            title: "Successfully Payment Done Check Your Email !",
             iconColor: "#ED1C24",
             toast: true,
             icon: "success",
@@ -126,8 +116,6 @@ const Index = () => {
             showConfirmButton: false,
             timer: 3500,
           });
-
-          router.push(`/payment/${paymentProductId}`);
         }
       }
     } catch (err) {

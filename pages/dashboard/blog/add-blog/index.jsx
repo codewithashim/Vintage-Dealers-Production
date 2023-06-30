@@ -6,7 +6,7 @@ import AddBlog from "@/src/Components/Dashboard/Blogs/AddBlog/AddBlog";
 import HomeIcon from "@mui/icons-material/Home";
 import GrainIcon from "@mui/icons-material/Grain";
 import { Breadcrumbs, Typography } from "@mui/material";
-import Link from "next/link";
+import Link from 'next/link';
 import { FaCartPlus } from "react-icons/fa";
 
 const Index = () => {

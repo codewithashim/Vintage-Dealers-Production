@@ -9,6 +9,17 @@ import BrandFive from "../../../Assets/Brands/brand_5.png";
 import BrandSix from "../../../Assets/Brands/brand_6.png";
 import BrandSeven from "../../../Assets/Brands/brand_7.png";
 import BrandEight from "../../../Assets/Brands/brand_8.png";
+import BrandNine from "../../../Assets/Brands/brand_9.png";
+import BrandTen from "../../../Assets/Brands/brand_10.png";
+import BrandEleven from "../../../Assets/Brands/brand_11.png";
+import BrandTwelve from "../../../Assets/Brands/brand_12.png";
+import BrandThirteen from "../../../Assets/Brands/brand_13.png";
+import BrandFourteen from "../../../Assets/Brands/brand_14.png";
+import BrandFifteen from "../../../Assets/Brands/brand_15.png";
+import BrandSixteen from "../../../Assets/Brands/brand_16.png";
+import BrandSeventeen from "../../../Assets/Brands/brand_17.png";
+import BrandEighteen from "../../../Assets/Brands/brand_18.png";
+import BrandNineteen from "../../../Assets/Brands/brand_19.png";
 import Image from "next/image";
 
 const brandBannerData = [
@@ -43,6 +54,50 @@ const brandBannerData = [
   {
     id: 8,
     image: BrandEight,
+  },
+  {
+    id: 9,
+    image: BrandNine,
+  },
+  {
+    id: 10,
+    image: BrandTen,
+  },
+  {
+    id: 11,
+    image: BrandEleven,
+  },
+  {
+    id: 12,
+    image: BrandTwelve,
+  },
+  {
+    id: 13,
+    image: BrandThirteen,
+  },
+  {
+    id: 14,
+    image: BrandFourteen,
+  },
+  {
+    id: 15,
+    image: BrandFifteen,
+  },
+  {
+    id: 16,
+    image: BrandSixteen,
+  },
+  {
+    id: 17,
+    image: BrandSeventeen,
+  },
+  {
+    id: 18,
+    image: BrandEighteen,
+  },
+  {
+    id: 19,
+    image: BrandNineteen,
   },
 ];
 

@@ -4,7 +4,7 @@ import HomeBlogs from "../HomeBlogs/HomeBlogs";
 import HomeInfoCard from "../HomeInfoCard/HomeInfoCard";
 import ExploreMore from "../ProductBanner/ExploreMore/ExploreMore";
 import TrandingArriveProduct from "../TrandingArriveProduct/TrandingArriveProduct/TrandingArriveProduct";
-import PopularCategory from "../PopualrCategory/PopualrCategory";
+import PopularCategory from "../PopualrBrand/PopualrBrand";
 import BrandBanner from "../BrandBanner/BrandBanner";
 import SearviceAndBestShelling from "../SearviceAndBestShelling/SearviceAndBestShelling";
 

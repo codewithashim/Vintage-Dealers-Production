@@ -6,8 +6,6 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import HomeIcon from "@mui/icons-material/Home";
 import GrainIcon from "@mui/icons-material/Grain";
 import Link from "next/link";
-import Image from "next/image";
-import AboutUsBuilding from "../../src/Assets/About/AboutUsBanner.png";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { DataContextApi } from "@/src/Context/DataContext";
 
@@ -40,15 +38,6 @@ const Index = () => {
 
         <section className="py-4">
           <div>
-            <div className="topHeadImage">
-              <Image
-                src={AboutUsBuilding}
-                alt="Red Rose Auto"
-                width={"100%"}
-                height={"100%"}
-                className=" w-full"
-              />
-            </div>
             <div className="container mx-auto">
               <div className="title my-6">
                 <h2 className="text-center md:text-left text-[1rem] md:text-[1.5rem] lg:text-3xl uppercase xxs:text-2xl  text-black font-bold">

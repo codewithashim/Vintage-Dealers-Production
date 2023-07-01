@@ -1,72 +1,73 @@
 import React, { useState } from "react";
-import BallJoints from "../../../Assets/Category/balljoint.png";
-import Bushings from "../../../Assets/Category/bushing.png";
-import CoilSprings from "../../../Assets/Category/coilspring.png";
-import ControlArms from "../../../Assets/Category/controlarms.png";
-import LinkAssy from "../../../Assets/Category/linkassy.png";
-import ShockAbsorbers from "../../../Assets/Category/shockabsorber.png";
-import Exhaustmanifoldsystem from "../../../Assets/Category/exhaust&manifoldsystem.png";
-import Driveshaft from "../../../Assets/Category/driveshaft.png";
-import Tierod from "../../../Assets/Category/tierod.png";
+import Acura from "../../../Assets/PopularBrand/acura-logo.png";
+import Fiat from "../../../Assets/PopularBrand/fiat-logo.png";
+import Holden from "../../../Assets/PopularBrand/holden-logo.png";
+import Lamborghini from "../../../Assets/PopularBrand/lamborghini-logo.png";
+import Lotus from "../../../Assets/PopularBrand/lotus-logo.png";
+import Maybach from "../../../Assets/PopularBrand/maybach-logo.png";
+import Saab from "../../../Assets/PopularBrand/saab-logo.png";
+import Tesla from "../../../Assets/PopularBrand/tesla-logo.png";
+import Toyota from "../../../Assets/PopularBrand/toyota-logo.png";
+
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 
-const cetegoryData = [
+const brandData = [
   {
     id: 1,
-    categories: "Shock Absorbers",
-    image: ShockAbsorbers,
+    brandName: "Acura",
+    brandImage: Acura,
   },
   {
     id: 2,
-    categories: "Control Arms",
-    image: ControlArms,
+    brandName: "Fiat",
+    brandImage: Fiat,
   },
   {
     id: 3,
-    categories: "Coil Springs",
-    image: CoilSprings,
+    brandName: "Holden",
+    brandImage: Holden,
   },
   {
     id: 4,
-    categories: "Bushings",
-    image: Bushings,
+    brandName: "Lamborghini",
+    brandImage: Lamborghini,
   },
   {
     id: 5,
-    categories: "Ball Joints",
-    image: BallJoints,
+    brandName: "Lotus",
+    brandImage: Lotus,
   },
   {
     id: 6,
-    categories: "Link Assy",
-    image: LinkAssy,
+    brandName: "Maybach",
+    brandImage: Maybach,
   },
   {
     id: 7,
-    categories: "Exhaust & Manifold System",
-    image: Exhaustmanifoldsystem,
+    brandName: "Saab",
+    brandImage: Saab,
   },
   {
     id: 8,
-    categories: "Driveshaft",
-    image: Driveshaft,
+    brandName: "Tesla",
+    brandImage: Tesla,
   },
   {
     id: 9,
-    categories: "Tie Rod",
-    image: Tierod,
+    brandName: "Toyota",
+    brandImage: Toyota,
   },
 ];
 
-const PopualrCategory = () => {
+const PopualrBrand = () => {
   const [updateData, setUpdateData] = useState(12);
   const showCard = () => {
     if (updateData == 12) {
-      setUpdateData((p) => p + cetegoryData.length);
+      setUpdateData((p) => p + brandData.length);
     } else {
-      setUpdateData((p) => p - cetegoryData.length);
+      setUpdateData((p) => p - brandData.length);
     }
   };
 
@@ -76,30 +77,30 @@ const PopualrCategory = () => {
         <div className="md:w-[100%] mx-auto mt-7 md:mt-10 mb-5 md:mb-20 md:block ">
           <div className="text-center leading-10 mb-5 md:mb-8">
             <h1 className="lg:text-3xl uppercase xxs:text-2xl  text-black font-bold">
-              Popular Categories
+              Popular Brands
             </h1>
           </div>
           <div className=" rounded-lg pb-[1px]">
             <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6  md:pt-5 gap-5">
-              {cetegoryData.slice(0, updateData).map((child) => {
-                const { id, categories, image } = child;
+              {brandData.slice(0, updateData).map((child) => {
+                const { id, brandName, brandImage } = child;
                 // console.log(id, "id form cetagory");
                 return (
                   <div
                     className="color-b bg-white p-2 md:p-3 text-center rounded-md duration-300 transform  shadow-sm hover:-translate-y-1.5 border-t border-slate-100 hover:bg-red-10 hover:text-red-500"
                     key={id}
                   >
-                    <Link href={`/category/${categories}`}>
+                    <Link href={`/brand/${brandName}`}>
                       <Image
                         alt="image"
-                        src={image}
+                        src={brandImage}
                         className="chele items-center justify-center  inline-flex"
                         width={65}
                         height={65}
                       />
 
                       <div className="dark:text-black text-sm font-semibold tracking-wide cursor-pointer">
-                        {categories}
+                        {brandName}
                       </div>
                     </Link>
                   </div>
@@ -124,4 +125,4 @@ const PopualrCategory = () => {
   );
 };
 
-export default PopualrCategory;
+export default PopualrBrand;

@@ -8,7 +8,7 @@ const Index = () => {
     <ThemeProvider theme={theme}>
       <FullLayout>
         <section>
-          <h2> maneg category</h2>
+          <h2> Manage categories</h2>
         </section>
       </FullLayout>
     </ThemeProvider>

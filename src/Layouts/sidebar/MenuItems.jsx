@@ -11,7 +11,7 @@ const Menuitems = [
   },
 
   {
-    title: "Categori",
+    title: "Categories",
     icon: "grid",
     href: "/dashboard/categori/add-categori",
   },
@@ -23,7 +23,7 @@ const Menuitems = [
   },
 
   {
-    title: "Searvice",
+    title: "Services",
     icon: "truck",
     href: "/dashboard/searvices/add-searvices",
   },
@@ -38,7 +38,7 @@ const Menuitems = [
     href: "/dashboard/blog/add-blog",
   },
   {
-    title: "Photo Galery",
+    title: "Photo Gallery",
     icon: "image",
     href: "/dashboard/photogalery/add-photogalery",
   },

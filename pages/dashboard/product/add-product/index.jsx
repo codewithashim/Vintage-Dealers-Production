@@ -37,7 +37,7 @@ const Index = () => {
                   color="text.primary"
                   className="hover:bg-black-700  rounded flex gap-2 justify-center items-center"
                 >
-                  <FaCartPlus></FaCartPlus> Maneg Product
+                  <FaCartPlus></FaCartPlus> Manage Product
                 </Typography>
               </Link>
 

@@ -1,90 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import ProductOne from "@/src/Assets/Products/Product_1.png";
+// import ProductOne from "@/src/Assets/Products/Product_1.png";
 import useProduct from "@/src/Hooks/useProduct/useProduct";
 
-const productList = [
-  {
-    id: 1,
-    productName: "Professional Cordless Drill Power Tools",
-    price: 100,
-    image: ProductOne,
-    description:
-      "  Santiago travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididun ut labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elitet.",
-    addtionalInfo: [
-      {
-        height: 10,
-        width: 10,
-        weight: 10,
-        dimentions: 10,
-      },
-    ],
-  },
-  {
-    id: 2,
-    productName: "Professional Cordless Drill Power Tools",
-    price: 150,
-    image: ProductOne,
-    description:
-      "  Santiago travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididun ut labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elitet.",
-    addtionalInfo: [
-      {
-        height: 10,
-        width: 10,
-        weight: 10,
-        dimentions: 10,
-      },
-    ],
-  },
-  {
-    id: 3,
-    productName: "Professional Cordless Drill Power Tools",
-    price: 190,
-    image: ProductOne,
-    description:
-      "  Santiago travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididun ut labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elitet.",
-    addtionalInfo: [
-      {
-        height: 10,
-        width: 10,
-        weight: 10,
-        dimentions: 10,
-      },
-    ],
-  },
-  {
-    id: 4,
-    productName: "Professional Cordless Drill Power Tools",
-    price: 500,
-    image: ProductOne,
-    description:
-      "  Santiago travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididun ut labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elitet.",
-    addtionalInfo: [
-      {
-        height: 10,
-        width: 10,
-        weight: 10,
-        dimentions: 10,
-      },
-    ],
-  },
-  {
-    id: 5,
-    productName: "Professional Cordless Drill Power Tools",
-    price: 500,
-    image: ProductOne,
-    description:
-      "  Santiago travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididun ut labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elitet.",
-    addtionalInfo: [
-      {
-        height: 10,
-        width: 10,
-        weight: 10,
-        dimentions: 10,
-      },
-    ],
-  },
-];
+
 
 const TrandingProduct = () => {
   const { allProductData } = useProduct();

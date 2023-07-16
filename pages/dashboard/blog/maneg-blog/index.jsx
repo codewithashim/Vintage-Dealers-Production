@@ -45,7 +45,7 @@ const Index = () => {
                 color="text.primary"
               >
                 <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-                Maneg Blog
+                Manage Blog
               </Typography>
             </Breadcrumbs>
           </div>

@@ -1,7 +1,5 @@
 import React from "react";
-import BlogOne from "../../../Assets/Blogs/blog_1.jpg";
-import BlogTwo from "../../../Assets/Blogs/blog_2.jpeg";
-import BlogThree from "../../../Assets/Blogs/blog_3.jpg";
+
 import Image from "next/image";
 import { FaArrowRight, FaRegComment } from "react-icons/fa";
 import useBlogs from "@/src/Hooks/useBlogs/useBlogs";

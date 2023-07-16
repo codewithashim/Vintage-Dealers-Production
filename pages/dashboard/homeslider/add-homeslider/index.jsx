@@ -35,7 +35,7 @@ const Index = () => {
                 color="text.primary"
               >
                 <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-                Maneg Home Slider
+                Manage Home Slider
               </Typography>
             </Link>
 

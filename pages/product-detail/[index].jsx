@@ -156,6 +156,7 @@ const Index = () => {
             {productByIdData &&
               productByIdData.length &&
               productByIdData?.map((product) => {
+                console.log(product?.productImage)
                 return (
                   <div key={product?._id}>
                     <Image

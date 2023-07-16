@@ -55,6 +55,24 @@ const Index = () => {
         } else {
           router.push("/");
         }
+      })
+      .catch((err)=>{
+        Swal.fire({
+          position: "top-end",
+          timerProgressBar: true,
+          title: err.message,
+          iconColor: "#ED1C24",
+          toast: true,
+          icon: "error",
+          showClass: {
+            popup: "animate__animated animate__fadeInRight",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutRight",
+          },
+          showConfirmButton: false,
+          timer: 3500,
+        });
       });
     } catch (error) {
       console.log(error);
@@ -119,7 +137,7 @@ const Index = () => {
                         <FaLock />
                       </span>
                       <input
-                        type="password"
+                        type={showPassword ? 'text' : 'password'}
                         className=" border-[1px] border-[#ddd] text-[15px] font-[500] text-gray-700 outline-none w-full rounded-lg shadow-md pl-10 pr-2.5 py-3 "
                         placeholder="Password"
                         name="password"

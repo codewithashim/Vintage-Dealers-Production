@@ -46,7 +46,6 @@ const Index = () => {
                 <AllCategory />
               </div>
               <div className="my-6">
-                <BrandList />
               </div>
               <div>
                 <TrandingProduct />
